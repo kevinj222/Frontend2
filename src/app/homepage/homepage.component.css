@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f7f7f7; */
+    margin: 0;
+    padding: 0;
+    /* background-image: url("src/assets/need1.webp");
+    background-attachment: fixed;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 40%;  */
+  }
+body
+  {
+    /* content: '';
+    position: absolute;
+    top:0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px; */
+    background-image: url("src/assets/need1.webp");
+    background-attachment:fixed;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%; 
+    height: 1280px;
+
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 
+  {
+    color: #333;
+    margin-left: 80px;
+    margin-top: 40px;
+    font-size: 56px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25ab75;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    background-color: #808080;
+  }
+  /* *{
+    background-image: url("src\assets\need1.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat:no-repeat;
+  } */
+  img
+{
+    width:1%;
+    aspect-ratio: 1/0;
+    object-fit: contain;
+    position: relative;
+}
+.navbar 
+{
+    font-family: 'Rubik', sans-serif;
+    font-style: italic;
+    font-weight: 1000;
+    font-size: 80px;
+    background-color: #f7f7f7;
+}
+.btn btn-outline-success me-2
+{
+    color: #25ab75;
+}
+/* ::ng-deep .opaque-component {
+    background-color: rgba(0, 0, 0, 0.1); 
+} */
+.Home 
+{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh; /* Adjust the height as needed */
+  margin-left: 40px;
+  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+}
+.containeru 
+{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 50%;
+  
+}
+.blockquotex 
+{
+  width: 60%;
+  padding: 20px;
+  font-size: large;
+  text-align: justify;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+}

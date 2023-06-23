@@ -1,0 +1,149 @@
+/* css for app component only */
+.input-text 
+{
+    display:inline;
+    margin: 2px;
+    border: black;
+    border-radius: 0.1rem;
+    padding: 0px;
+  }
+  .app-my-form
+  {
+        margin-right: 50%;    
+  }
+  
+  .list ul li button
+   {
+    position: absolute;
+    right: 0%;
+    background: #25ab75;
+    color: #fcfafa !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 0.4rem;
+    display: inline-block;
+    border: none;
+  }
+  
+  .add-btn {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #25ab75;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 0.4rem;
+    display: inline-block;
+    border: none;
+  }
+  
+  .app-title {
+    text-align: center;
+    color: #c1c1c1;
+    font-size: 70px;
+  }
+  ul {
+    /* remove default padding and margin from ul*/
+    margin: 0px;
+    padding: 0px;
+  }
+  .list ul li {
+    display: block;
+    width: 90%;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    line-height: 45px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #cccccc;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .container {
+    /* color: #141414; */
+    max-width: 300px;
+    /* margin: auto; */
+    margin-left: 45%;
+    margin-top: -50px;
+   
+    /* border-color: black; */
+    /* outline: 1px solid black; */
+    background-color: rgb(184, 224, 202);
+  }
+  h1
+  {
+    font-size: 45px;
+    margin-top: 3%;
+    margin-left: 100px;
+    color: #25ab75;
+    font-weight: bold;
+  }
+ 
+  mat-form-field
+  {
+    background-color: rgb(184, 224, 202);
+      position: relative;
+      bottom: 97px;
+      left: 30px;
+      max-width: 300px;
+  }
+  .alert {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .form
+  {
+    margin-right: 80%;
+    margin-top: 4%;
+  }
+  .result-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 50px;
+    margin-left: 248px;
+    margin-top: -40px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .deadline
+  {
+    margin-left: 75%;
+    margin-top: -30px;
+    width: 180px;
+  }
+  #submit
+  {
+    background-color: #25ab75;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-left: 120px;
+    margin-top: 190px;
+
+    background-color: lightgray;
+    color: black;
+    cursor: pointer;
+    width: 150px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+  }
+  #submit.active {
+    background-color: green;
+    color: white;
+  }
+  
+  #submit:hover {
+    background-color: darkgray;
+  }
+  

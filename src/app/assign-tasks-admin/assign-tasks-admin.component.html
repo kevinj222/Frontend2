@@ -1,0 +1,34 @@
+<app-nav></app-nav>
+<app-buttons></app-buttons>
+<!-- container is reffer to to do list -->
+<h1>Assign tasks</h1>
+    <div class="form">
+    <div class="result-box">
+        Name: {{ result }}<!-- sEARCH BUTTON RESULT TO BE DISPLAYED HERE HTML -->
+      </div> 
+      <div class="deadline">
+        <!-- <form (ngSubmit)="submitForm()"> -->
+            <form>
+                <input type="date" placeholder="Enter the deadline" name="fieldInput" >
+            <!-- <input type="text" placeholder="Enter your value" [(ngModel)]="fieldValue" name="fieldInput" required> -->
+            <button type="submit">Search</button>
+          </form>
+      </div>   
+      <h1>Task List</h1>
+    <app-task-form (submitTask)="onSubmitTask($event)"></app-task-form>
+    <!-- <div class="container">
+    <input type="text" class="input-text" placeholder="Type a task" [(ngModel)]="todoValue" (keyup.enter)="addItem()" />
+    <button class="add-btn" (click)="addItem()">Add</button>
+    <div class="list">
+        <ul>
+            <li *ngFor="let item of myTaskList">
+                <input type="checkbox" name="isDone" [(ngModel)]="item.isDone" />
+                {{ item.value }}
+                <button class="btn" (click)="deleteItem(item.id)">Delete</button>
+                
+            </li>
+        </ul>
+    </div>
+    
+    
+</div> -->

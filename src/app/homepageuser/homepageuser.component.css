@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f7f7f7; */
+    margin: 0;
+    padding: 0;
+    background-image: url("src/assets/need1.webp");
+    background-attachment: fixed;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%; 
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 
+  {
+    color: #333;
+    margin-left: 80px;
+    margin-top: 40px;
+    font-size: 56px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }

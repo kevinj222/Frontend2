@@ -1,0 +1,10 @@
+<div class="button-container">
+    <button [ngClass]="{'active': selectedButton === 1}" (click)="selectButton(1)" style="position: 200px;" routerLink="/assign">
+        Assign Tasks
+    </button>
+    <button  [ngClass]="{'active': selectedButton === 2}" (click)="selectButton(2)" routerLink="/view">
+        View Tasks
+    </button>
+    <!-- <button class="btn btn-outline-success me-2" type="button">Contact</button> -->
+  </div>
+  

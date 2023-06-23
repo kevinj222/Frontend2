@@ -1,0 +1,35 @@
+.button-container 
+{
+    display: flex;
+    justify-content: center;
+    margin-left: 450px;
+    margin-bottom: -80px; 
+    margin-top: 90px; 
+  }
+ 
+  
+  button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+
+    background-color: lightgray;
+    color: black;
+    cursor: pointer;
+    width: 150px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+  }
+  
+  button.active 
+  {
+    background-color: green;
+    color: white;
+  }
+  
+  button:hover 
+  {
+    background-color: darkgray;
+  }
+  
+  

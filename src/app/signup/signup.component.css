@@ -1,0 +1,25 @@
+section
+{
+    background: linear-gradient(to bottom, #5cbf89, #f1f4f1);
+}
+img
+{
+    height: 600px;
+    width: fit-content;
+    margin-top: -70px;
+
+}
+button
+{
+    background-color: #25ab75;
+    
+}
+button:hover
+{
+    background-color: grey;
+}
+.img-fluid
+{
+    border-radius: 10%;
+    aspect-ratio: 4/3;
+}

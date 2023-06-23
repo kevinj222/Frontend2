@@ -1,0 +1,21 @@
+.box {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 30px;
+    background-color: #f1f1f1;
+    width:260px;
+    height:260px;
+    margin-top: 70px;
+    margin-left: 40px;
+  }
+  h1{
+    margin-left: 40px;
+    font-size:40px;
+    color: green;
+  }
+  .table {
+    width:60%;
+    margin-left: 380px;
+    margin-top: -260px;
+
+  }
