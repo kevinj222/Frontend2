@@ -9,10 +9,8 @@ import { RouterServiceService } from '../service/router-service.service';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent implements OnInit{
-
-  
-
+export class SignupComponent implements OnInit
+{
   signup: Signup = new Signup();
 
   signUpArray: Array<Signup> = [];
@@ -20,18 +18,19 @@ export class SignupComponent implements OnInit{
   signupForm: FormGroup;
   
 
-  constructor(private routerService: RouterServiceService, private authenticateService: AuthService, public formBuilder: FormBuilder) {
+  constructor(private routerService: RouterServiceService, private authenticateService: AuthService, public formBuilder: FormBuilder) 
+  {
     this.signupForm = new FormGroup({
       username: new FormControl(),
-      password: new FormControl(),
-      conpassword: new FormControl(),
       name: new FormControl(),
       email: new FormControl(),
-      type: new FormControl('user')
+      userPassword: new FormControl(),
+      // type: new FormControl('user')
     });
   }
 
-ngOnInit(): void {
+ngOnInit(): void 
+{
   if (sessionStorage.getItem('key') != null) 
   {
     this.routerService.tohome();  
@@ -40,12 +39,12 @@ ngOnInit(): void {
   {
     console.log("hi");
     this.signupForm = this.formBuilder.group({
-      type: ['user'], // Set the default value for type to "user"
+      // type: ['user'], // Set the default value for type to "user"
       name: ['', Validators.required],
       username: ['', Validators.required],
-      password: ['', Validators.required],
-      conpassword: ['', Validators.required],
-      email: ['', Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]
+      userPassword: ['', Validators.required],
+      // email: ['', Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]
+      email: ['', Validators.required],
     });
   }
 }
@@ -54,21 +53,19 @@ ngOnInit(): void {
     return this.signupForm.controls; 
   }
 
-  onSubmit(){
+  onSubmit()
+  {
     console.log("Hi");
-
-    this.signup.password = this.signupForm.value.password;
-    console.log("password== " + this.signupForm.value.password)
+    this.signup.userPassword = this.signupForm.value.userPassword;
+    console.log("userPassword== " + this.signupForm.value.userPassword)
     this.signup.username = this.signupForm.value.username;
     console.log("username== " + this.signupForm.value.username)
     this.signup.name = this.signupForm.value.name;
     console.log("name== " + this.signupForm.value.name)
     this.signup.email = this.signupForm.value.email;
     console.log("email== " + this.signupForm.value.email)
-    this.signup.conpassword = this.signupForm.value.conpassword;
-    console.log("conpassword== " + this.signupForm.value.conpassword)
-    this.signup.type = this.signupForm.value.type;
-    console.log("type== " + this.signupForm.value.type)
+    // this.signup.type = this.signupForm.value.type;
+    // console.log("type== " + this.signupForm.value.type)
 
     this.signUpArray.push(this.signup);
     this.authenticateService.addUser(this.signup).subscribe((data) => 
@@ -77,14 +74,13 @@ ngOnInit(): void {
       console.log(data)
       this.routerService.tologin();
       alert("User registered succesfully " + data.username);
-
     },
-      (error: any) => {
+     (error: any) => 
+      {
         console.log(error);
-        alert("User already Registered");
+        alert("User already Registered!");
       });
   }
-
 }
 
 

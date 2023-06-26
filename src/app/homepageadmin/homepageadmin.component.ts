@@ -17,7 +17,7 @@ export class HomepageadminComponent implements AfterViewInit
   {
     const typed = new Typed(this.typingElement.nativeElement, 
       {
-      strings: ['Task Management', 'Another Option', 'More Examples'], // Add the strings you want to display
+      strings: ['Task Management', 'Scheduling Tasks', 'Tasks Communication'], // Add the strings you want to display
       typeSpeed: 50, // Adjust the typing speed (milliseconds)
       loop: true, // Enable looping
       backSpeed: 50, // Adjust the speed of deleting characters (milliseconds)

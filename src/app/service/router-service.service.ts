@@ -10,14 +10,16 @@ export class RouterServiceService
  
   constructor(private router:Router) { }
 
-  tologin() {
+  tologin()
+  {
     this.router.navigate(['/login']);
   }
 
   tohome() {
-    this.router.navigate(['home']);
+    this.router.navigate(['/home']);
   }
-  touser() {
+  touser() 
+  {
     this.router.navigate(['/user']);
   }
   toadmin(){

@@ -146,4 +146,22 @@
   #submit:hover {
     background-color: darkgray;
   }
-  
+  img
+{
+    width:1%;
+    aspect-ratio: 1/0;
+    object-fit: contain;
+    position: relative;
+}
+.navbar 
+{
+    font-family: 'Rubik', sans-serif;
+    
+    font-weight: 1000;
+    font-size: 80px;
+    background-color: #f7f7f7;
+}
+.btn btn-outline-success me-2
+{
+    color: #25ab75;
+}

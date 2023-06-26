@@ -13,17 +13,18 @@ export class AuthService
 { 
   addUser(signup: Signup): Observable<Signup> 
   {
-    return this.httpClient.post<Signup>('http://localhost:8088/api/user/register', signup);
+    return this.httpClient.post<Signup>('http://localhost:8090/api/auth/registerNewUser', signup);
   }
 
   constructor(private httpClient: HttpClient) {}
 
  
-  getusers(userr: Login) {
+  getusers(userr: Login) 
+  {
     console.log("GET USER");
     console.log(userr.username);
-    console.log(userr.password);
-    console.log(userr.type);
+    console.log(userr.userPassword);
+    // console.log(userr.type);
 
     return this.httpClient.post<any>(`http://localhost:8088/api/users/login`, userr, { headers: new HttpHeaders().set('responseType', 'text') }).pipe(
       map(

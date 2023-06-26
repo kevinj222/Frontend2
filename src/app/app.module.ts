@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AssignTasksAdminComponent } from './assign-tasks-admin/assign-tasks-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +21,11 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ButtonsLogComponent } from './buttons-log/buttons-log.component';
 import { HomepageadminComponent } from './homepageadmin/homepageadmin.component';
 import { HomepageuserComponent } from './homepageuser/homepageuser.component';
+import { RouterModule } from '@angular/router';
+import { AuthInterceptor } from './_auth/auth.interceptor';
+import { AuthGuard } from './_auth/auth.guard';
+import { UserService } from './_services/user.service';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 
 @NgModule({
@@ -37,7 +42,8 @@ import { HomepageuserComponent } from './homepageuser/homepageuser.component';
     HomepageComponent,
     ButtonsLogComponent,
     HomepageadminComponent,
-    HomepageuserComponent,   
+    HomepageuserComponent,
+    ForbiddenComponent,   
   ],
   imports: [
     BrowserModule,
@@ -47,8 +53,16 @@ import { HomepageuserComponent } from './homepageuser/homepageuser.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
+    RouterModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass:AuthInterceptor,
+    multi:true
+ },
+  UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

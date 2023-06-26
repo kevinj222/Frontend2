@@ -14,6 +14,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ButtonsLogComponent } from './buttons-log/buttons-log.component';
 import { HomepageadminComponent } from './homepageadmin/homepageadmin.component';
 import { HomepageuserComponent } from './homepageuser/homepageuser.component';
+import { AuthGuard } from './_auth/auth.guard';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 
 const routes: Routes = [
@@ -29,8 +31,9 @@ const routes: Routes = [
   {path:'admin',component:AdminDashboardComponent},
   {path:'home',component:HomepageComponent},
   {path:'log',component:ButtonsLogComponent},
-  {path:'homeadmin',component:HomepageadminComponent},
-  {path:'homeuser',component:HomepageuserComponent}
+  {path:'homeadmin',component:HomepageadminComponent,canActivate:[AuthGuard], data:{roles:['Admin']}},
+  {path:'homeuser',component:HomepageuserComponent,canActivate:[AuthGuard], data:{roles:['User']}},
+  {path:'forbidden',component:ForbiddenComponent}
 ];
 
 @NgModule({

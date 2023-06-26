@@ -1,5 +1,55 @@
-<app-nav></app-nav>
-<app-buttons></app-buttons>
+<div class="opaque-component">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: black; font-size: 35px; text-shadow: -1px -1px 0 #25ab75, 1px -1px 0 #25ab75, -1px 1px 0 #25ab75, 1px 1px 0 #25ab75; margin-left: 20px;">D'Vent</a>
+    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <!-- Add "justify-content-end" class here -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <nav class="navbar bg-body-tertiary">
+                <form class="container-fluid justify-content-start">
+                  <button class="btn btn-outline-success me-2" type="button">Home</button>
+                </form>
+              </nav>
+            </li>
+            <li class="nav-item">
+              <nav class="navbar bg-body-tertiary">
+                <form class="container-fluid justify-content-start">
+                  <button class="btn btn-outline-success me-2" type="button">About</button>
+                </form>
+              </nav>
+            </li>
+            <li class="nav-item">
+              <nav class="navbar bg-body-tertiary">
+                <form class="container-fluid justify-content-start">
+                  <button class="btn btn-outline-success me-2" type="button">Contact</button>
+                </form>
+              </nav>
+            </li>
+            <!-- <app-buttons-log></app-buttons-log> -->
+            <li class="nav-item">
+              <nav class="navbar bg-body-tertiary">
+                <form class="container-fluid justify-content-start">
+                  <button class="btn btn-outline-success me-2  btn-lg " style=" size:40px ; background-color: #25ab75; color: aliceblue;" type="button" routerLink="/login">LogOut</button>
+                </form>
+              </nav>
+            </li>
+            <!-- <li class="nav-item">
+              <nav class="navbar bg-body-tertiary">
+                <form class="container-fluid justify-content-start">
+                  <button class="btn btn-outline-success me-2 rounded-circle  btn-lg " style="size:40px ; background-color: #25ab75; color: aliceblue;" type="button" routerLink="/signup">SignUp</button>
+                </form>
+              </nav>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div>
+    
 <!-- container is reffer to to do list -->
 <h1>Assign tasks</h1>
     <div class="form">

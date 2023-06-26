@@ -1,12 +1,118 @@
-<app-nav></app-nav>
+<div class="opaque-component">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color: black; font-size: 35px; text-shadow: -1px -1px 0 #25ab75, 1px -1px 0 #25ab75, -1px 1px 0 #25ab75, 1px 1px 0 #25ab75; margin-left: 20px;">D'Vent</a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <!-- Add "justify-content-end" class here -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <nav class="navbar bg-body-tertiary">
+              <form class="container-fluid justify-content-start">
+                <button class="btn btn-outline-success me-2" type="button">Home</button>
+              </form>
+            </nav>
+          </li>
+          <li class="nav-item">
+            <nav class="navbar bg-body-tertiary">
+              <form class="container-fluid justify-content-start">
+                <!-- <button class="btn btn-outline-success me-2"  type="button">About</button> -->
+                <a href="#aboutid" class="btn btn-outline-success me-2" style="font-style: normal;">About</a>
+              </form>
+            </nav>
+          </li>
+          <li class="nav-item">
+            <nav class="navbar bg-body-tertiary">
+              <form class="container-fluid justify-content-start">
+                <a href="#idcon" class="btn btn-outline-success me-2">Contact</a>
+              </form>
+            </nav>
+          </li>
+          <!-- <app-buttons-log></app-buttons-log> -->
+          <li class="nav-item">
+            <nav class="navbar bg-body-tertiary">
+              <form class="container-fluid justify-content-start">
+                <button class="btn btn-outline-success me-2  btn-lg "  type="button" routerLink="/login">Login</button>
+              </form>
+            </nav>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </div>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <h1 style>Making<br class="visible-tablet"><br> 
-      <span #typingElement style="color: #25ab75;" class="cursor-soft typer white-space"></span>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1 >Making<br class="visible-tablet"><br> 
+  <span #typingElement style="color: #25ab75;" class="cursor-soft typer white-space"></span>
+  <br>
+  <br>more human!
+</h1>
+<div class="Home" >
+  <p>
+    D'Vent is the simple Task Managment tool for Teams looking to boost their
+  </p>
+  <p > efficiency by increasing individual productivity.</p>
+  <form class="container-fluid justify-content-start">
+    <a class="button" style="margin-top: 20px; margin-left: 80px;" routerLink="/signup">Get started<svg width="15" height="15" viewBox="0 0 13 13" fill="none">
+      <path d="M6.60019 0.199951L5.4722 1.32795L9.93619 5.79995H0.200195V7.39995H9.93619L5.4722 11.872L6.60019 13L13.0002 6.59995L6.60019 0.199951Z" fill="white">
+    </path></svg></a>
+  </form>
+</div>
+    <div id="aboutid">
       <br>
-      <br>more human!
-    </h1>
-  </body>
+      <h1 style="color: #25ab75; " >Why We are here?</h1>
+        <h3 class="blockquotex" style="margin-left: 30px;margin-top: 60px;">
+          We create The Tool for anyone in the world to to simplify and 
+          <h3 class="blockquotex">optimize task management for Teams.</h3>
+        </h3>
+    <h1 style="color: #25ab75;" >Why D'Vent?</h1>
+    <p class="blockquotex"style="background-color: #c9f4e0; border-radius: 10%; margin-left:2%; margin-top: 5%; width: 50%;" >     
+        We realized the need for a collaborative task management tool which is much needed in our modern life
+       to efficently manage time for a collaboration.
+       With D'vent, we seamlessly integrated our daily tasks in such a way that 
+       The convenience and efficiency that D'vent provided sparked a profound realization 
+       - if our tool could effectively organize our daily tasks,
+       it could undoubtedly benefit other teams as well.
+       
+       D'vent was developed with a clear purpose: to simplify and 
+       optimize task management for teams of all sizes. Our mission is to empower teams to 
+       effortlessly coordinate their activities, foster collaboration, and enhance overall productivity.
+        </p>
+    </div> 
+</body>
+<div id="idcon">
+<footer style="background-color: #c9f4e0; outline: 2px solid black;" > 
+<div class="row">
+  <div class="col col-5">
+    <div class="flex flex-center-desk flex-col-mob">
+      <div class="footer-logo" style="height: 40px; margin-top: 20px;">
+        <a class="navbar-brand" href="#" style="color: black; font-size: 35px; 
+        text-shadow: -1px -1px 0 #25ab75, 1px -1px 0 #25ab75, -1px 1px 0 #25ab75, 1px 1px 0 #25ab75;
+         margin-left: 20px;margin-top: 20 ;  font-family: 'Rubik', sans-serif; font-weight: 1000;"><i>D'Vent</i></a></div>
+      <p class="footer-content" style="margin-left: 20px;font-family: 'Rubik', sans-serif;"><b>D,vent</b> is the simplest to-do list for teams and group,
+        who want to increase efficiency by increasing individual productivity.
+      </p>
+    </div>
+  </div>
+  <div class="col col-2 offset-5">
+    <p style="font-family: 'Rubik', sans-serif; font-size: 26px; margin-top: 10px; font-weight: 600;" >Contact Us</p>
+    Kevin J kodiyan
+  </div>
+</div>
+<div class="row">
+  <div class="col col-3" style="margin-left: 20px;">
+    <div>
+      <span class="copyright">
+        © D'Vent 2023 All rights reserved
+      </span>
+    </div>
+  </div>
+</div>
+</footer>
+</div>

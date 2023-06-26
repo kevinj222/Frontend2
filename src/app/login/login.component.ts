@@ -5,6 +5,10 @@ import { Login } from '../modal/login';
 //import { AuthenticateServiceService } from '../service/authenticate-service.service';
 import { AuthService } from '../service/auth.service';
 import { RouterServiceService } from '../service/router-service.service';
+import { UserService } from '../_services/user.service';
+import { UserAuthService } from '../_services/user-auth.service';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -17,60 +21,90 @@ export class LoginComponent implements OnInit
   loginForm: FormGroup;
   submitMessage!: string;
   flag: boolean = false;
+  username: string|undefined;
+  userPassword:string='';
 
-  constructor(private routerService: RouterServiceService, private authservice: AuthService) {
+  constructor(private routerService: RouterServiceService, private authservice: AuthService,
+    private userService: UserService, private userAuthService: UserAuthService, private router: Router
+    ) 
+    {
     this.loginForm = new FormGroup({
       username: new FormControl(),
-      password: new FormControl(),
-      type: new FormControl()
+      userPassword: new FormControl(),
+      // type: new FormControl()
     });
   }
 
-  ngOnInit(): void {
-    if (sessionStorage.getItem('key') != null) 
-    {
-      this.routerService.tohome();
-    }
+  ngOnInit(): void 
+  {
+    // if (sessionStorage.getItem('key') != null) 
+    // {
+    //   this.routerService.tohome();
+    // }
   }
 
   onSubmit() 
   {
-    console.log("hi from loginsubmit");
-    this.login.username = this.loginForm.value.username;
-    this.login.password = this.loginForm.value.password;
-    this.login.type = this.loginForm.value.type;
+    
+      this.userService.login(this.loginForm.value).subscribe(
+      (response: any) => {
+        this.userAuthService.setRoles(response.user.role);
+        this.userAuthService.setToken(response.jwtToken);
+        const role = response.user.role[0].roleName;
 
-    this.submitMessage = this.loginForm.value.username;
-
-    console.log("Login Submit: " + this.loginForm.value);
-
-    this.authservice.getusers(this.login).subscribe((data) => {
-      this.authservice.setBearerToken(data['token']);
-      console.log(data);
-
-      if (data != null) {
-        sessionStorage.setItem("key", this.submitMessage);
-        this.flag = true;
-
-        if (this.login.type == 'user') 
+        if (role === 'Admin') 
         {
-          console.log("user");
-          this.routerService.touser();
+          this.router.navigate(['/homeadmin']);
+        } else 
+        {
+          this.router.navigate(['/homeuser']);
         }
-         else if (this.login.type == 'admin') 
-        {
-          console.log("admin");
-          this.routerService.toadmin();
-        } 
+      },
+
+      (error) => 
+      {
+        console.log(error);
+        this.submitMessage = "Incorrect Username or Password";
       }
-    },
-    error => 
-    {
-      console.log("error");
-      alert('You have entered incorrect Username or Password!');
-    });
+    );
   }
 }
+  //   console.log("hi from loginsubmit");
+  //   this.login.username = this.loginForm.value.username;
+  //   this.login.password = this.loginForm.value.password;
+  //   this.login.type = this.loginForm.value.type;
+
+  //   this.submitMessage = this.loginForm.value.username;
+
+  //   console.log("Login Submit: " + this.loginForm.value);
+
+  //   this.authservice.getusers(this.login).subscribe((data) => {
+  //     this.authservice.setBearerToken(data['token']);
+  //     console.log(data);
+
+  //     if (data != null) {
+  //       sessionStorage.setItem("key", this.submitMessage);
+  //       this.flag = true;
+
+  //       if (this.login.type == 'user') 
+  //       {
+  //         console.log("user");
+  //         this.routerService.touser();
+  //       }
+  //        else if (this.login.type == 'admin') 
+  //       {
+  //         console.log("admin");
+  //         this.routerService.toadmin();
+  //       } 
+  //     }
+  //   },
+  //   error => 
+  //   {
+  //     console.log("error");
+  //     alert('You have entered incorrect Username or Password!');
+  //   });
+  // }
+
 
 
 

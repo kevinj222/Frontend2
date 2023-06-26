@@ -1,13 +1,14 @@
 export class Login {
 
     username: string;
-    password: string;
-    type: string;
+    userPassword: string;
+    // type: string;
 
-    constructor() {
-        this.password = '';
+    constructor()
+     {
+        this.userPassword = '';
         this.username = '';
-        this.type = '';
+        // this.type = '';
     }
 
 }

@@ -1,20 +1,18 @@
 export class Signup 
 {
-    name: string;
     username: string;
-    password: string;
+    name: string;
     email: string;
-    conpassword: string;
-    type: string;
+    userPassword: string;
+    // type: string;
 
     constructor() 
     {
-        this.name = '';
         this.username = '';
-        this.password = '';
+        this.name = '';
         this.email = '';
-        this.conpassword= '';
-        this.type= '';
+        this.userPassword = '';
+        // this.type= '';
       }
 
 }

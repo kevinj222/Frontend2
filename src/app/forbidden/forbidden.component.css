@@ -1,0 +1,47 @@
+.mains
+{
+        /* content: '';
+    position: absolute;
+    top:0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px; */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("src/assets/forbidden.png");
+    background-attachment:fixed;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 60%; 
+    height: 600px;
+}
+h1 
+  {
+    color: #333;
+    margin-left: 80px;
+    margin-top: 40px;
+    font-size: 60px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+  }
+  h5{
+    font-size: 67px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+  }
+  button
+  {
+    font-size: 24px; 
+    padding: 12px 36px;
+    color:#1993d4 ;
+    outline-color: #1993d4;
+    outline: 2px;
+    margin-top: 140px;
+    margin-left: 80px;
+  }
+  button:hover
+  {
+    background-color: #1993d4;
+  }

@@ -1,12 +1,12 @@
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import Typed from 'typed.js';
 
 @Component({
-  selector: 'app-homepageuser',
-  templateUrl: './homepageuser.component.html',
-  styleUrls: ['./homepageuser.component.css']
+  selector: 'app-forbidden',
+  templateUrl: './forbidden.component.html',
+  styleUrls: ['./forbidden.component.css']
 })
-export class HomepageuserComponent implements AfterViewInit 
+export class ForbiddenComponent implements AfterViewInit
 {
   @ViewChild('typingElement')
   typingElement!: ElementRef;
@@ -17,7 +17,7 @@ export class HomepageuserComponent implements AfterViewInit
   {
     const typed = new Typed(this.typingElement.nativeElement, 
       {
-      strings: ['Task Management','Scheduling Tasks', 'Tasks Communication'], // Add the strings you want to display
+      strings: ['Unauthorized Access','No Sneaky peek!', 'Unauthorized exploit'], // Add the strings you want to display
       typeSpeed: 50, // Adjust the typing speed (milliseconds)
       loop: true, // Enable looping
       backSpeed: 50, // Adjust the speed of deleting characters (milliseconds)
